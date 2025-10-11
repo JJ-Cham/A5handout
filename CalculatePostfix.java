@@ -1,0 +1,69 @@
+public class CalculatePostfix {
+    public static Double postfixToResult(Queue<Object> tokens) {
+        // FILL IN
+        //Push numbers onto the stack
+        //Pop two numbers when you see an operator
+        //Make sure the expression is valid (like when there are/aren't enough operands)
+        Stack<Double> stack = new Stack<>(); //creates empty stack for doubles
+        //loop through the queue of tokens
+        while (!tokens.isEmpty()) {
+            Object token = tokens.remove(); //remove the front token from the queue
+
+            if (token instanceof Double){
+                stack.push((Double) token); //push the double onto the stack
+            } 
+            else if (token instanceof Character){
+                if (stack.isEmpty()) throw new IllegalArgumentException("Not enough: " + token);
+                Double b = stack.pop(); //pop the top two doubles from the stack, b then a
+
+                char operator = (Character) token; //cast the token to a character
+
+                if (stack.isEmpty()) throw new IllegalArgumentException("Not enough: " + token);
+                Double a = stack.pop();
+
+                Double result;
+
+                switch (operator) { //perform the operation based on the operator
+                    case '+': result = a + b; break;
+                    case '-': result = a - b; break;
+                    case '*': result = a * b; break;
+                    case '/' : {
+                        if (b == 0) throw new IllegalArgumentException("Division by zero");
+                        result = a / b;
+                        break;
+                    }
+                    default: throw new IllegalArgumentException("Invalid op: " + operator);
+                }
+                stack.push(result); //push the result back onto the stack
+            } 
+            else {
+                throw new IllegalArgumentException("Invalid token: " + token);
+            }
+        }
+        // After processing all tokens there must be exactly one result on the stack
+        if (stack.isEmpty()) throw new IllegalArgumentException("No result");
+        Double finalResult = stack.pop(); //pop the final result from the stack
+        if (!stack.isEmpty()) throw new IllegalArgumentException("Too many ops");
+        //return the final result
+        return finalResult; 
+    }
+
+
+    public static void main(String[]args){
+
+        // read expression from command line
+        String expressionString = args[0];
+
+        // convert expression to queue of tokens
+        Queue<Object> tokens = Tokenizer.readTokens(expressionString);
+
+        //print to see what the result is 
+        System.out.println(tokens);
+
+        //compute the result
+        Double result = postfixToResult(tokens);
+
+        //print the result
+        System.out.println(result);
+    }
+}
