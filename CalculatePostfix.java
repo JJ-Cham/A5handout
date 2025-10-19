@@ -15,11 +15,11 @@ public class CalculatePostfix {
             else if (token instanceof Character){
                 if (stack.isEmpty()) throw new IllegalArgumentException("Not enough: " + token);
                 Double b = stack.pop(); //pop the top two doubles from the stack, b then a
-
+                Double a = stack.pop();
                 char operator = (Character) token; //cast the token to a character
 
                 if (stack.isEmpty()) throw new IllegalArgumentException("Not enough: " + token);
-                Double a = stack.pop();
+                
 
                 Double result;
 
