@@ -1,7 +1,20 @@
 import java.util.Stack;
 import java.util.Queue;
-
+/**
+ * Provides a method to evaluate postfix expressions.
+ */
 public class CalculatePostfix {
+
+    /**
+     * Evaluates a postfix expression represented as a queue of tokens.
+     * Operands are Doubles and operators are Characters (+, -, *, /, ^).
+     *
+     * @param tokens a queue of postfix tokens containing Doubles and operator Characters
+     * @return the evaluated result as a Double
+     * @throws IllegalArgumentException if the expression is invalid,
+     *                                  contains invalid tokens,
+     *                                  or involves division by zero
+     */
     public static Double postfixToResult(QueueADT<Object> tokens) {
         // FILL IN
         //Push numbers onto the stack

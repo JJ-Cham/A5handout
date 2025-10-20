@@ -30,29 +30,29 @@ __**YES**___ 1 pts: Implements shunting-yard algorithm to produce queue of token
 
 __**YES**___ 1 pt: Output of shunt yard passed to postfix via queue
 
-_____ 1 pt: Computes correct arithmetic results for +, -, *, and / operations
+__**YES**___ 1 pt: Computes correct arithmetic results for +, -, *, and / operations
 
-_____ 1 pt: Properly handles operators with different associative properties (e.g. ^) using the full Wikipedia algorithm
+__**YES**___ 1 pt: Properly handles operators with different associative properties (e.g. ^) using the full Wikipedia algorithm
 
 
 
 ## General Items:
 
-_____ 4 pts: Program compiles without errors or warnings
+__**YES**___ 4 pts: Program compiles without errors or warnings
 
-_____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+___**YES**__ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
 _____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
-      _____ Classes & class members all have Javadoc header comments
+      __**YES**___ Classes & class members all have Javadoc header comments
 
-      _____ Clear and consistent indentation of bracketed sections
+      ___**YES**__ Clear and consistent indentation of bracketed sections
 
-      _____ Adheres to Java conventions on naming & capitalization
+      __**YES**___ Adheres to Java conventions on naming & capitalization
 
-      _____ Methods & variables all have clear and accurate names
+      __**YES**___ Methods & variables all have clear and accurate names
 
-      _____ Methods avoid confusing side effects
+      _**YES**____ Methods avoid confusing side effects
 
 __**YES**___ 1 pt: All required files included with submission (including completed checklist file)
 

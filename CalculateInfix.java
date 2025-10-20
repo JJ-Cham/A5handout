@@ -1,23 +1,42 @@
 //import java.util.ArrayDeque;
-
+/**
+ * Provides methods to convert and evaluate infix expressions.
+ */
 public class CalculateInfix {
 
-    // Helper: operator precedence
-public static int precedence(char op) {
-    switch (op) {
-        case '+':
-        case '-':
-            return 1;
-        case '*':
-        case '/':
-            return 2;
-        case '^':
-            return 3;
-        default:
-            return 0;
-    }
-}
+    // help with operator precedence
 
+    /**
+     * Returns the precedence level of a given operator.
+     *
+     * @param op the operator character (+, -, *, /, ^)
+     * @return an integer representing the operator's precedence level
+     */
+    public static int precedence(char op) {
+        switch (op) {
+            case '+':
+            case '-':
+                return 1;
+            case '*':
+            case '/':
+                return 2;
+            case '^':
+                return 3;
+            default:
+                return 0;
+        }
+    }
+
+
+/**
+* Converts an infix expression (as a queue of tokens) to postfix form
+* and evaluates it using CalculatePostfix.
+*
+* @param tokens a queue of tokens containing Doubles and operator Characters
+* @return the evaluated result of the infix expression as a Double
+* @throws IllegalArgumentException if the input contains invalid tokens
+*                                  or mismatched parentheses
+*/
 public static Double infixToPostfix(Queue<Object> tokens) {
     // FILL IN
     Queue<Object> output = new Queue<>();
@@ -72,6 +91,7 @@ public static Double infixToPostfix(Queue<Object> tokens) {
     return result;
 }   
 // Main method
+
 public static void main(String[] args) {
     if (args.length == 0) {
         System.out.println("Usage: java CalculateInfix \"(3+2)*5\"");
