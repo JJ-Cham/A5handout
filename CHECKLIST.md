@@ -15,20 +15,20 @@ You should also make sure that your logic and ideas are clearly expressed to ful
 
 Postfix.java:
 
-_____ 1 pts: Pushes numeric tokens onto the stack
+__**YES**___ 1 pts: Pushes numeric tokens onto the stack
 
-_____ 2 pts: Processes operators by popping & combining numbers
+__**YES**___ 2 pts: Processes operators by popping & combining numbers
 
-_____ 2 pts: Produces correct answer to any valid postfix expression
+__**YES**___ 2 pts: Produces correct answer to any valid postfix expression
 
-_____ 1 pts: Throws an exception with an informative error message in case of malformed expressions
+__**YES**___ 1 pts: Throws an exception with an informative error message in case of malformed expressions
 
 
-Calculate.java:
+CalculateInfix.java:
 
-_____ 1 pts: Implements shunting-yard algorithm to produce queue of tokens
+__**YES**___ 1 pts: Implements shunting-yard algorithm to produce queue of tokens
 
-_____ 1 pt: Output of shunt yard passed to postfix via queue
+__**YES**___ 1 pt: Output of shunt yard passed to postfix via queue
 
 _____ 1 pt: Computes correct arithmetic results for +, -, *, and / operations
 
@@ -54,6 +54,6 @@ _____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
       _____ Methods avoid confusing side effects
 
-_____ 1 pt: All required files included with submission (including completed checklist file)
+__**YES**___ 1 pt: All required files included with submission (including completed checklist file)
 
-_____ 1 pt: readme.md contains reflection on the assignment
+_**YES**____ 1 pt: readme.md contains reflection on the assignment

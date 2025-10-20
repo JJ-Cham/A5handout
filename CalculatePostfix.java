@@ -1,5 +1,8 @@
+import java.util.Stack;
+import java.util.Queue;
+
 public class CalculatePostfix {
-    public static Double postfixToResult(Queue<Object> tokens) {
+    public static Double postfixToResult(QueueADT<Object> tokens) {
         // FILL IN
         //Push numbers onto the stack
         //Pop two numbers when you see an operator
@@ -18,7 +21,7 @@ public class CalculatePostfix {
                 Double a = stack.pop();
                 char operator = (Character) token; //cast the token to a character
 
-                if (stack.isEmpty()) throw new IllegalArgumentException("Not enough: " + token);
+                //if (stack.isEmpty()) throw new IllegalArgumentException("Not enough: " + token);
                 
 
                 Double result;
@@ -32,6 +35,11 @@ public class CalculatePostfix {
                         result = a / b;
                         break;
                     }
+                    //phase 4
+                    case '^':
+                    result = Math.pow(a, b);
+                    break;
+
                     default: throw new IllegalArgumentException("Invalid op: " + operator);
                 }
                 stack.push(result); //push the result back onto the stack
@@ -55,7 +63,7 @@ public class CalculatePostfix {
         String expressionString = args[0];
 
         // convert expression to queue of tokens
-        Queue<Object> tokens = Tokenizer.readTokens(expressionString);
+        QueueADT<Object> tokens = Tokenizer.readTokens(expressionString);
 
         //print to see what the result is 
         System.out.println(tokens);
