@@ -15,4 +15,6 @@ Any references used besides JavaDoc and course materials: Chatgpt to fix my not 
 Reflection on your experience with this assignment: I enjoyed seeing the assignment actually work after compiling and running postfix. Infix was a bit difficult for me to put together because of the going from postfix to infix. I liked thinking about how to implement phase 4 with precedence and the exponent. 
 
 Any questions you still have?
-N/A
+
+- Are we expected to handle invalid expressions (like 3 + * 2 or mismatched parentheses), or can we assume the input will always be valid?
+- For parentheses, should nested parentheses (like (3 * (2 + 1))) be handled automatically if the algorithm is implemented correctly?
