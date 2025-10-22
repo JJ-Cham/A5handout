@@ -8,7 +8,7 @@ Group Member Name(s): N/A
 
 Other collaborators you worked with, including TAs (and feel free to give a shoutout to anyone who was particularly helpful): N/A
 
-Any references used besides JavaDoc and course materials: Chatgpt to fix my not enough tokens error
+Any references used besides JavaDoc and course materials: 
 
 ## Reflection
 

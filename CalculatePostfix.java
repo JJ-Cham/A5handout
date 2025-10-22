@@ -69,7 +69,13 @@ public class CalculatePostfix {
         return finalResult; 
     }
 
-
+    /**
+     * Runs the Postfix calculator program.
+     * Reads a postfix expression from the command line, tokenizes it,
+     * and prints the evaluated result.
+     *
+     * @param args command-line arguments; expects one postfix expression as a string
+     */
     public static void main(String[]args){
 
         // read expression from command line

@@ -91,7 +91,13 @@ public static Double infixToPostfix(Queue<Object> tokens) {
     return result;
 }   
 // Main method
-
+/**
+ * Runs the CalculateInfix program.
+ * Takes an infix expression as a command-line argument, tokenizes it,
+ * and prints the result of evaluating the expression.
+ *
+ * @param args command-line arguments; expects one infix expression as a string
+ */
 public static void main(String[] args) {
     if (args.length == 0) {
         System.out.println("Usage: java CalculateInfix \"(3+2)*5\"");
